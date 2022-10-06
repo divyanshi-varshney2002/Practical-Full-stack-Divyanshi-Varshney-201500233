@@ -16,6 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <style>
       * {
         padding: 0;
@@ -28,12 +29,13 @@
       }
       nav {
         width: 100%;
-        height: 100px;
+        /* height: 100px; */
         background-color: rgb(36, 13, 13);
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        padding: 0px;
+        padding: 20px;
       }
       button {
         color: #29d9d5;
@@ -52,6 +54,7 @@
       }
       nav ul {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
       }
       nav ul li {
@@ -59,7 +62,7 @@
         display: inline-block;
         justify-content: space-evenly;
       }
-      nav ul li a {
+      a {
         color: white;
         align-items: center;
         font-size: 20px;
@@ -67,14 +70,14 @@
         text-decoration: none;
         transition: 1s;
       }
-      nav ul li a:hover {
+      a:hover {
         color: #29d9d5;
       }
       .Blogs {
-        width: 82%;
-        height: 90px;
-        margin: 20px 195px;
-        padding: 10px 20px;
+        width: 100%;
+        /* height: 90px; */
+        padding: 10px;
+        /* margin: 20px 195px; */
         background-color: rgba(137, 43, 226, 0.452);
         border-radius: 30px;
       }
@@ -84,37 +87,82 @@
       main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 30px 30px;
-        width: 80%;
+        /* grid-template-rows: 1fr 1fr 1fr; */
+        gap: 30px;
+        /* width: 100%; */
+        padding: 20px;
+        /* justify-content: center; */
       }
-      .Gallery {
-        display: flex;
-        justify-content: center;
-      }
+       .Gallery {
+        padding: 50px 200px;
+      } 
       main img {
-        width: 400px;
+        width: 100%;
         height: 250px;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 20px;
       }
-      .banner{
-        background: url("https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&w=600");
+      .banner {
+        padding: 20px;
+        background: url("https://media.istockphoto.com/photos/digitally-enhanced-shot-of-two-handsome-businessmen-working-in-the-picture-id1322205575?b=1&k=20&m=1322205575&s=170667a&w=0&h=CuVOvQv6qSFKhyUAKR_x72kGdYuESHumN0yILMpg_-I=");
         background-repeat: no-repeat;
         background-size: cover;
-        display:inline-block;
+        display: inline-block;
         align-items: center;
         text-align: center;
         width: 100%;
       }
-      .banner h3{
+      .banner h3 {
         font-size: 30px;
         color: #29d9d5;
       }
-      .banner h1{
+      .banner h1 {
         color: white;
         font-size: 50px;
+      }
+      .banner p {
+        color: rgba(255, 255, 255, 0.54);
+      }
+
+      footer {
+        background-color: rgb(36, 13, 13);
+        display: flex;
+        color: white;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .ph,
+      .con,
+      .n {
+        width: 400px;
+        padding: 10px 20px;
+        font-size: 22px;
+      }
+      .ph h3,
+      .con h3,
+      .n h3 {
+        padding: 20px;
+      }
+      .ph h6,
+      .con h6,
+      .n h6 {
+        padding: 10px;
+        opacity: 0.7;
+      }
+      .n input {
+        width: 300px;
+        height: 40px;
+        background-color: transparent;
+        border: 2px solid #29d9d5;
+        border-radius: 10px;
+        padding: 5px;
+        /* margin: 20px 0px; */
+      }
+      @media screen and (max-width: 900px) {
+        main {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -135,14 +183,15 @@
       </ul>
       <button>Book Trial</button>
     </nav>
-    <div class="Blogs">
-      <h2>Photographer's Blog</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, eligendi.
-      </p>
-    </div>
+    
 
     <div class="Gallery">
+      <div class="Blogs">
+        <h2>Photographer's Blog</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, eligendi.
+        </p>
+      </div>
       <main>
         <img
           src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
@@ -171,15 +220,50 @@
       </main>
     </div>
     <div class="banner">
-        <h3>Start your Journey</h3>
-        <br>
-        <h1>Let's Capture This World</h1>
-        <br>
-        <p>Lorem ipsum dolor sit, amet cons
-            ectetur adipisicing elit. Ullam enim, minima rem vitae labore, v <br> voluptatibus quisquam laborum assumenda repellendus.</p>
-        <br>
-        <button>Book Trial</button>
+      <h3>Start your Journey</h3>
+      <br />
+      <h1>Let's Capture This World</h1>
+      <br />
+      <p>
+        Lorem ipsum dolor sit, amet cons ectetur adipisicing elit. Ullam enim,
+        minima rem vitae labore, v <br />
+        voluptatibus quisquam laborum assumenda repellendus.
+      </p>
+      <br />
+      <button>Book Trial</button>
     </div>
-    <footer></footer>
+    <footer id="con">
+      <div class="ph">
+        <a href="#Gallery"><h3>Photography</h3></a>
+        <h6>Lorem ipsum dolor sit amet.</h6>
+        <h6>Lorem ipsum dolor sit amet.</h6>
+        <br>
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <div class="con">
+        <h3>Contact Info</h3>
+        <h6>divyanshi Varshney_cs20@gla.ac.in</h6>
+        <h6>201500233</h6>
+        <h6>Mathura,281001</h6>
+      </div>
+      <div class="n">
+        <h3>Newsletter</h3>
+        
+        <h6>Subscribe to our Newsletter</h6>
+        <!-- <br> -->
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+        />
+        <br>
+        <br>
+        <button>Subscribe</button>
+      </div>
+    </footer>
   </body>
 </html>
